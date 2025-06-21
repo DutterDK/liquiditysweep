@@ -208,10 +208,13 @@ class CSVDataLoader:
         for split_name, split_data in splits.items():
             filename = f"{base_filename}_{split_name}.csv"
             filepath = os.path.join(self.data_dir, filename)
-            print(f"[DEBUG] Saving {split_name} split to {filepath} with {len(split_data)} records...")
+            logger.debug(
+                "Saving %s split to %s with %d records", split_name, filepath, len(split_data)
+            )
             split_data.to_csv(filepath, index=False)
-            print(f"[DEBUG] Saved {split_name} split to {filepath}")
-            logger.info(f"Saved {split_name} data to {filepath}: {len(split_data)} records")
+            logger.info(
+                "Saved %s data to %s: %d records", split_name, filepath, len(split_data)
+            )
     
     def load_splits(self, base_filename: str) -> Dict[str, pd.DataFrame]:
         """

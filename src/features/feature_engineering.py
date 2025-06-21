@@ -14,10 +14,21 @@ from ta.momentum import RSIIndicator, StochasticOscillator
 from ta.volatility import BollingerBands, AverageTrueRange
 from ta.volume import VolumeWeightedAveragePrice
 import logging
+import multiprocessing as mp
+from functools import partial
 
 from src.strategy.liquidity_sweep import LiquiditySweepStrategy
 
 logger = logging.getLogger(__name__)
+
+def _calculate_chunk_features(df_chunk: pd.DataFrame, config: Dict) -> pd.DataFrame:
+    """
+    A helper function to calculate features for a single chunk of data.
+    This function is designed to be called by parallel workers.
+    """
+    # Each worker needs its own instance of FeatureEngineer
+    feature_engineer = FeatureEngineer(config)
+    return feature_engineer.calculate_features_single_threaded(df_chunk)
 
 class FeatureEngineer:
     """
@@ -59,9 +70,53 @@ class FeatureEngineer:
         # Add a buffer for safety
         self.max_lookback_period += 5 
         
-    def calculate_features(self, df: pd.DataFrame) -> pd.DataFrame:
+    def calculate_features(self, df: pd.DataFrame, num_workers: int = None) -> pd.DataFrame:
         """
-        Calculates all features for the given dataframe.
+        Calculates all features for the given dataframe, using parallel processing if num_workers > 1.
+        """
+        if num_workers is None:
+            num_workers = mp.cpu_count()
+
+        if num_workers > 1 and len(df) > 10000: # Only parallelize for large datasets
+            logger.info(f"Starting parallel feature calculation with {num_workers} workers...")
+            
+            # Add overlap to chunks to handle rolling window calculations correctly
+            overlap = self.max_lookback_period
+            chunk_size = len(df) // num_workers
+            
+            # Create chunks with overlap
+            chunks = []
+            for i in range(num_workers):
+                start = i * chunk_size
+                end = (i + 1) * chunk_size
+                if i > 0:
+                    start -= overlap
+                chunks.append(df.iloc[start:end])
+
+            # Use a multiprocessing pool to process chunks in parallel
+            with mp.Pool(num_workers) as pool:
+                # Use partial to pass the config to the worker function
+                process_func = partial(_calculate_chunk_features, config=self.config)
+                processed_chunks = pool.map(process_func, chunks)
+
+            # Combine chunks, removing the overlap
+            final_features = []
+            for i, chunk in enumerate(processed_chunks):
+                if i > 0:
+                    final_features.append(chunk.iloc[overlap:])
+                else:
+                    final_features.append(chunk)
+            
+            features_df = pd.concat(final_features)
+            logger.info("Parallel feature calculation complete.")
+            return features_df
+        else:
+            logger.info("Starting single-threaded feature calculation...")
+            return self.calculate_features_single_threaded(df)
+
+    def calculate_features_single_threaded(self, df: pd.DataFrame) -> pd.DataFrame:
+        """
+        Calculates all features for the given dataframe in a single thread.
         """
         logger.info(f"Starting feature calculation for {len(df)} records...")
         

@@ -463,28 +463,45 @@ class LiquiditySweepStrategy:
     def get_multi_timeframe_signals(self, data_dict: Dict[str, pd.DataFrame]) -> pd.DataFrame:
         """
         Generate signals across multiple timeframes and combine them into a single feature DataFrame.
+        This version is optimized to first resample data and then generate signals.
         """
-        all_signals_df = pd.DataFrame(index=data_dict[self.config['base_timeframe']].index)
+        base_timeframe = self.config.get('base_timeframe', 'M1')
+        base_df = data_dict[base_timeframe]
+        all_signals_df = pd.DataFrame(index=base_df.index)
 
-        for timeframe, df in data_dict.items():
-            logger.info(f"Generating signals for {timeframe}...")
-            signals = self.generate_signals(df, timeframe)
-            
-            # Create DataFrame from the signals
-            df_signals = pd.DataFrame(index=df.index)
-            df_signals[f'is_sweep_high_{timeframe}'] = signals['is_sweep_high']
-            df_signals[f'is_sweep_low_{timeframe}'] = signals['is_sweep_low']
-            df_signals[f'buy_signal_strength_{timeframe}'] = 0.0
-            df_signals[f'sell_signal_strength_{timeframe}'] = 0.0
+        # 1. Resample data for all timeframes first
+        resampled_data = {tf: self._resample_data(base_df, tf) for tf in self.config.get('timeframes', []) if tf != base_timeframe}
+        resampled_data[base_timeframe] = base_df # Add base timeframe data
 
-            for sig in signals['buy_signals']:
-                df_signals.loc[sig['timestamp'], f'buy_signal_strength_{timeframe}'] = sig['strength']
-            for sig in signals['sell_signals']:
-                df_signals.loc[sig['timestamp'], f'sell_signal_strength_{timeframe}'] = sig['strength']
-            
-            # Resample to base timeframe and merge
-            df_signals_resampled = df_signals.reindex(all_signals_df.index, method='ffill')
-            all_signals_df = all_signals_df.merge(df_signals_resampled, left_index=True, right_index=True, how='left')
+        # 2. Generate signals for each timeframe
+        timeframe_signals = {}
+        for timeframe, df in resampled_data.items():
+            if not df.empty:
+                logger.info(f"Generating signals for {timeframe}...")
+                signals = self.generate_signals(df, timeframe)
+                
+                # Create DataFrame from the signals
+                df_signals = pd.DataFrame(index=df.index)
+                df_signals[f'is_sweep_high_{timeframe}'] = signals['is_sweep_high']
+                df_signals[f'is_sweep_low_{timeframe}'] = signals['is_sweep_low']
+                df_signals[f'buy_signal_strength_{timeframe}'] = 0.0
+                df_signals[f'sell_signal_strength_{timeframe}'] = 0.0
+
+                for sig in signals['buy_signals']:
+                    if sig['timestamp'] in df_signals.index:
+                        df_signals.loc[sig['timestamp'], f'buy_signal_strength_{timeframe}'] = sig['strength']
+                for sig in signals['sell_signals']:
+                    if sig['timestamp'] in df_signals.index:
+                        df_signals.loc[sig['timestamp'], f'sell_signal_strength_{timeframe}'] = sig['strength']
+                
+                timeframe_signals[timeframe] = df_signals
+
+        # 3. Combine signals into a single DataFrame
+        for timeframe, df_signals in timeframe_signals.items():
+            if not df_signals.empty:
+                # Resample signal DataFrame to base timeframe and merge
+                df_resampled = df_signals.reindex(all_signals_df.index, method='ffill')
+                all_signals_df = all_signals_df.merge(df_resampled, left_index=True, right_index=True, how='left')
 
         all_signals_df.fillna(0, inplace=True)
         logger.info("Combined multi-timeframe signals generated.")

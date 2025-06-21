@@ -19,15 +19,14 @@ from src.features.feature_engineering import FeatureEngineer
 from data_loader import CSVDataLoader
 from config.config import drl_config, env_config, system_config, data_config
 
-def precompute_features_single_thread(data: pd.DataFrame, logger) -> pd.DataFrame:
+def precompute_features_parallel(data: pd.DataFrame, num_workers: int, logger) -> pd.DataFrame:
     """
-    Pre-computes features for a dataset using a single thread.
-    This is slower but more stable and uses less memory.
+    Pre-computes features for a dataset using multiple threads.
     """
-    logger.info(f"Starting single-threaded feature computation for {len(data)} records...")
+    logger.info(f"Starting parallel feature computation with {num_workers} workers for {len(data)} records...")
     feature_engineer = FeatureEngineer({})
-    features = feature_engineer.calculate_features(data)
-    logger.info("Single-threaded feature computation complete.")
+    features = feature_engineer.calculate_features(data, num_workers=num_workers)
+    logger.info("Parallel feature computation complete.")
     return features
 
 def make_env(rank: int, features_df: pd.DataFrame, price_data: pd.DataFrame, num_envs: int, seed: int = 0):
@@ -66,9 +65,15 @@ def train(args, logger):
     val_df = data_dict['validation']
     logger.info(f"Data loaded: Train={len(train_df)}, Validation={len(val_df)}")
 
-    # Using stable single-threaded pre-computation
-    train_features = precompute_features_single_thread(train_df, logger)
-    val_features = precompute_features_single_thread(val_df, logger)
+    # Convert timestamp column to datetime and set as index
+    train_df['timestamp'] = pd.to_datetime(train_df['timestamp'])
+    train_df.set_index('timestamp', inplace=True)
+    val_df['timestamp'] = pd.to_datetime(val_df['timestamp'])
+    val_df.set_index('timestamp', inplace=True)
+
+    # Use parallel feature pre-computation
+    train_features = precompute_features_parallel(train_df, args.num_envs, logger)
+    val_features = precompute_features_parallel(val_df, args.num_envs, logger)
 
     if train_features.empty or val_features.empty:
         logger.error("Feature computation failed, exiting.")
@@ -108,6 +113,8 @@ def train(args, logger):
     
     ppo_params = drl_config.__dict__.copy()
     ppo_params.pop('model_type', None)
+    ppo_params.pop('buffer_size', None)
+    ppo_params.pop('tau', None)
 
     model = PPO("MlpPolicy", vec_env, tensorboard_log=system_config.tensorboard_log, device=device, verbose=0, **ppo_params)
     

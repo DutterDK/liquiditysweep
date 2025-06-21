@@ -1,0 +1,20 @@
+2025-06-21 11:23:33,090 - __main__ - INFO - Using CPU for training
+2025-06-21 11:23:33,090 - __main__ - INFO - Loading and processing data...
+2025-06-21 11:23:33,467 - data_loader - INFO - Loaded 796522 records from XAUUSD_processed_train.csv
+2025-06-21 11:23:33,733 - data_loader - WARNING - Data gaps found: 587 gaps
+2025-06-21 11:23:33,733 - data_loader - INFO - Data validation completed successfully
+2025-06-21 11:23:33,733 - data_loader - INFO - Preprocessed data: 796522 records
+2025-06-21 11:23:33,825 - data_loader - INFO - Loaded 170683 records from XAUUSD_processed_validation.csv
+2025-06-21 11:23:33,883 - data_loader - WARNING - Data gaps found: 126 gaps
+2025-06-21 11:23:33,883 - data_loader - INFO - Data validation completed successfully
+2025-06-21 11:23:33,883 - data_loader - INFO - Preprocessed data: 170683 records
+2025-06-21 11:23:33,973 - data_loader - INFO - Loaded 170684 records from XAUUSD_processed_test.csv
+2025-06-21 11:23:34,042 - data_loader - WARNING - Data gaps found: 124 gaps
+2025-06-21 11:23:34,042 - data_loader - INFO - Data validation completed successfully
+2025-06-21 11:23:34,043 - data_loader - INFO - Preprocessed data: 170684 records
+2025-06-21 11:23:34,045 - __main__ - INFO - Data loaded: Train=796522, Validation=170683
+2025-06-21 11:23:34,046 - __main__ - INFO - Starting single-threaded feature computation for 796522 records...
+2025-06-21 11:23:34,046 - src.features.feature_engineering - INFO - Starting feature calculation for 796522 records...
+2025-06-21 11:23:34,425 - src.features.feature_engineering - INFO - Generating strategy signals to use as features...
+2025-06-21 11:23:34,430 - src.strategy.liquidity_sweep - INFO - Generating strategy signals for M1...
+2025-06-21 11:23:34,430 - src.strategy.liquidity_sweep - INFO - Detecting liquidity sweeps...

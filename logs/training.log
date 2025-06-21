@@ -1,0 +1,371 @@
+2025-06-20 21:29:21,870 - __main__ - INFO - Using CPU for training
+2025-06-20 21:29:21,870 - __main__ - INFO - Loading data...
+2025-06-20 21:29:21,870 - data_loader - WARNING - Split file not found: XAUUSD_processed_train.csv
+2025-06-20 21:29:21,870 - data_loader - WARNING - Split file not found: XAUUSD_processed_validation.csv
+2025-06-20 21:29:21,870 - data_loader - WARNING - Split file not found: XAUUSD_processed_test.csv
+2025-06-20 21:29:21,870 - __main__ - ERROR - No data splits found. Please run data_loader.py first.
+2025-06-20 21:31:51,596 - __main__ - INFO - Using CPU for training
+2025-06-20 21:31:51,597 - __main__ - INFO - Loading data...
+2025-06-20 21:31:51,985 - data_loader - INFO - Loaded 796522 records from XAUUSD_processed_train.csv
+2025-06-20 21:31:52,257 - data_loader - WARNING - Data gaps found: 587 gaps
+2025-06-20 21:31:52,257 - data_loader - INFO - Data validation completed successfully
+2025-06-20 21:31:52,257 - data_loader - INFO - Preprocessed data: 796522 records
+2025-06-20 21:31:52,358 - data_loader - INFO - Loaded 170683 records from XAUUSD_processed_validation.csv
+2025-06-20 21:31:52,425 - data_loader - WARNING - Data gaps found: 126 gaps
+2025-06-20 21:31:52,425 - data_loader - INFO - Data validation completed successfully
+2025-06-20 21:31:52,429 - data_loader - INFO - Preprocessed data: 170683 records
+2025-06-20 21:31:52,585 - data_loader - INFO - Loaded 170684 records from XAUUSD_processed_test.csv
+2025-06-20 21:31:52,645 - data_loader - WARNING - Data gaps found: 124 gaps
+2025-06-20 21:31:52,649 - data_loader - INFO - Data validation completed successfully
+2025-06-20 21:31:52,649 - data_loader - INFO - Preprocessed data: 170684 records
+2025-06-20 21:31:52,652 - __main__ - INFO - Data loaded: Train=796522, Validation=170683, Test=170684
+2025-06-20 21:31:52,652 - __main__ - INFO - Creating environments...
+2025-06-20 22:25:46,436 - __main__ - INFO - Using CPU for training
+2025-06-20 22:25:46,436 - __main__ - INFO - Loading data...
+2025-06-20 22:25:46,820 - data_loader - INFO - Loaded 796522 records from XAUUSD_processed_train.csv
+2025-06-20 22:25:47,100 - data_loader - WARNING - Data gaps found: 587 gaps
+2025-06-20 22:25:47,100 - data_loader - INFO - Data validation completed successfully
+2025-06-20 22:25:47,100 - data_loader - INFO - Preprocessed data: 796522 records
+2025-06-20 22:25:47,191 - data_loader - INFO - Loaded 170683 records from XAUUSD_processed_validation.csv
+2025-06-20 22:25:47,257 - data_loader - WARNING - Data gaps found: 126 gaps
+2025-06-20 22:25:47,257 - data_loader - INFO - Data validation completed successfully
+2025-06-20 22:25:47,257 - data_loader - INFO - Preprocessed data: 170683 records
+2025-06-20 22:25:47,409 - data_loader - INFO - Loaded 170684 records from XAUUSD_processed_test.csv
+2025-06-20 22:25:47,479 - data_loader - WARNING - Data gaps found: 124 gaps
+2025-06-20 22:25:47,479 - data_loader - INFO - Data validation completed successfully
+2025-06-20 22:25:47,480 - data_loader - INFO - Preprocessed data: 170684 records
+2025-06-20 22:25:47,483 - __main__ - INFO - Data loaded: Train=796522, Validation=170683, Test=170684
+2025-06-20 22:25:47,483 - __main__ - INFO - Creating environments...
+2025-06-20 22:51:13,047 - __main__ - INFO - Using CPU for training
+2025-06-20 22:51:13,047 - __main__ - INFO - Loading and processing data...
+2025-06-20 22:51:13,428 - data_loader - INFO - Loaded 796522 records from XAUUSD_processed_train.csv
+2025-06-20 22:51:13,717 - data_loader - WARNING - Data gaps found: 587 gaps
+2025-06-20 22:51:13,717 - data_loader - INFO - Data validation completed successfully
+2025-06-20 22:51:13,718 - data_loader - INFO - Preprocessed data: 796522 records
+2025-06-20 22:51:13,809 - data_loader - INFO - Loaded 170683 records from XAUUSD_processed_validation.csv
+2025-06-20 22:51:13,875 - data_loader - WARNING - Data gaps found: 126 gaps
+2025-06-20 22:51:13,875 - data_loader - INFO - Data validation completed successfully
+2025-06-20 22:51:13,875 - data_loader - INFO - Preprocessed data: 170683 records
+2025-06-20 22:51:14,025 - data_loader - INFO - Loaded 170684 records from XAUUSD_processed_test.csv
+2025-06-20 22:51:14,092 - data_loader - WARNING - Data gaps found: 124 gaps
+2025-06-20 22:51:14,092 - data_loader - INFO - Data validation completed successfully
+2025-06-20 22:51:14,092 - data_loader - INFO - Preprocessed data: 170684 records
+2025-06-20 22:51:14,092 - __main__ - INFO - Processing data with 32 workers
+2025-06-20 22:51:14,092 - __main__ - INFO - Data processing completed: 796522 records
+2025-06-20 22:51:14,092 - __main__ - INFO - Processing data with 32 workers
+2025-06-20 22:51:14,092 - __main__ - INFO - Data processing completed: 170683 records
+2025-06-20 22:51:14,092 - __main__ - INFO - Processing data with 32 workers
+2025-06-20 22:51:14,092 - __main__ - INFO - Data processing completed: 170684 records
+2025-06-20 22:51:14,092 - __main__ - INFO - Data processed: Train=796522, Validation=170683, Test=170684
+2025-06-20 22:51:14,092 - __main__ - INFO - Creating optimized vectorized environments...
+2025-06-20 23:03:28,170 - __main__ - INFO - Using CPU for training
+2025-06-20 23:03:28,170 - __main__ - INFO - Loading and processing data...
+2025-06-20 23:03:28,571 - data_loader - INFO - Loaded 796522 records from XAUUSD_processed_train.csv
+2025-06-20 23:03:28,838 - data_loader - WARNING - Data gaps found: 587 gaps
+2025-06-20 23:03:28,838 - data_loader - INFO - Data validation completed successfully
+2025-06-20 23:03:28,838 - data_loader - INFO - Preprocessed data: 796522 records
+2025-06-20 23:03:28,929 - data_loader - INFO - Loaded 170683 records from XAUUSD_processed_validation.csv
+2025-06-20 23:03:28,989 - data_loader - WARNING - Data gaps found: 126 gaps
+2025-06-20 23:03:28,989 - data_loader - INFO - Data validation completed successfully
+2025-06-20 23:03:28,989 - data_loader - INFO - Preprocessed data: 170683 records
+2025-06-20 23:03:29,136 - data_loader - INFO - Loaded 170684 records from XAUUSD_processed_test.csv
+2025-06-20 23:03:29,198 - data_loader - WARNING - Data gaps found: 124 gaps
+2025-06-20 23:03:29,198 - data_loader - INFO - Data validation completed successfully
+2025-06-20 23:03:29,198 - data_loader - INFO - Preprocessed data: 170684 records
+2025-06-20 23:03:29,198 - __main__ - INFO - Processing data with 8 workers
+2025-06-20 23:03:29,198 - __main__ - INFO - Data processing completed: 796522 records
+2025-06-20 23:03:29,198 - __main__ - INFO - Processing data with 8 workers
+2025-06-20 23:03:29,198 - __main__ - INFO - Data processing completed: 170683 records
+2025-06-20 23:03:29,198 - __main__ - INFO - Processing data with 8 workers
+2025-06-20 23:03:29,198 - __main__ - INFO - Data processing completed: 170684 records
+2025-06-20 23:03:29,198 - __main__ - INFO - Data processed: Train=796522, Validation=170683, Test=170684
+2025-06-20 23:03:29,198 - __main__ - INFO - Creating optimized vectorized environments...
+2025-06-20 23:03:29,205 - __main__ - INFO - Creating 4 vectorized environments...
+2025-06-20 23:03:29,205 - __main__ - INFO - Using 4 environments for stability
+2025-06-20 23:03:29,205 - __main__ - INFO - Creating DummyVecEnv...
+2025-06-20 23:03:29,205 - __main__ - INFO - Creating environment 0...
+2025-06-20 23:06:20,311 - __main__ - INFO - Using CPU for training
+2025-06-20 23:06:20,311 - __main__ - INFO - Loading and processing data...
+2025-06-20 23:06:20,686 - data_loader - INFO - Loaded 796522 records from XAUUSD_processed_train.csv
+2025-06-20 23:06:20,962 - data_loader - WARNING - Data gaps found: 587 gaps
+2025-06-20 23:06:20,962 - data_loader - INFO - Data validation completed successfully
+2025-06-20 23:06:20,962 - data_loader - INFO - Preprocessed data: 796522 records
+2025-06-20 23:06:21,056 - data_loader - INFO - Loaded 170683 records from XAUUSD_processed_validation.csv
+2025-06-20 23:06:21,122 - data_loader - WARNING - Data gaps found: 126 gaps
+2025-06-20 23:06:21,122 - data_loader - INFO - Data validation completed successfully
+2025-06-20 23:06:21,122 - data_loader - INFO - Preprocessed data: 170683 records
+2025-06-20 23:06:21,271 - data_loader - INFO - Loaded 170684 records from XAUUSD_processed_test.csv
+2025-06-20 23:06:21,335 - data_loader - WARNING - Data gaps found: 124 gaps
+2025-06-20 23:06:21,335 - data_loader - INFO - Data validation completed successfully
+2025-06-20 23:06:21,335 - data_loader - INFO - Preprocessed data: 170684 records
+2025-06-20 23:06:21,338 - __main__ - INFO - Processing data with 16 workers
+2025-06-20 23:06:21,338 - __main__ - INFO - Data processing completed: 796522 records
+2025-06-20 23:06:21,338 - __main__ - INFO - Processing data with 16 workers
+2025-06-20 23:06:21,338 - __main__ - INFO - Data processing completed: 170683 records
+2025-06-20 23:06:21,338 - __main__ - INFO - Processing data with 16 workers
+2025-06-20 23:06:21,338 - __main__ - INFO - Data processing completed: 170684 records
+2025-06-20 23:06:21,338 - __main__ - INFO - Data processed: Train=796522, Validation=170683, Test=170684
+2025-06-20 23:06:21,338 - __main__ - INFO - Creating high-performance environments...
+2025-06-20 23:06:21,338 - __main__ - INFO - Creating 16 high-performance parallel environments...
+2025-06-20 23:06:21,346 - __main__ - INFO - Split data into 16 chunks of ~49782 records each
+2025-06-20 23:06:21,346 - __main__ - INFO - Creating SubprocVecEnv for true parallel processing...
+2025-06-20 23:06:23,437 - __main__ - INFO - Initializing environment 0 with 49782 records...
+2025-06-20 23:06:25,523 - __main__ - INFO - Initializing environment 1 with 49782 records...
+2025-06-20 23:06:27,693 - __main__ - INFO - Initializing environment 2 with 49782 records...
+2025-06-20 23:06:29,925 - __main__ - INFO - Initializing environment 3 with 49782 records...
+2025-06-20 23:06:32,220 - __main__ - INFO - Initializing environment 4 with 49782 records...
+2025-06-20 23:06:34,524 - __main__ - INFO - Initializing environment 5 with 49782 records...
+2025-06-20 23:06:36,830 - __main__ - INFO - Initializing environment 6 with 49782 records...
+2025-06-20 23:06:39,171 - __main__ - INFO - Initializing environment 7 with 49782 records...
+2025-06-20 23:06:41,438 - __main__ - INFO - Initializing environment 8 with 49782 records...
+2025-06-20 23:06:43,832 - __main__ - INFO - Initializing environment 9 with 49782 records...
+2025-06-20 23:06:46,160 - __main__ - INFO - Initializing environment 10 with 49782 records...
+2025-06-20 23:06:49,081 - __main__ - INFO - Initializing environment 11 with 49782 records...
+2025-06-20 23:06:51,437 - __main__ - INFO - Initializing environment 12 with 49782 records...
+2025-06-20 23:06:53,780 - __main__ - INFO - Initializing environment 13 with 49782 records...
+2025-06-20 23:08:35,210 - __main__ - INFO - Using CPU for training
+2025-06-20 23:08:35,210 - __main__ - INFO - Loading and processing data...
+2025-06-20 23:08:35,600 - data_loader - INFO - Loaded 796522 records from XAUUSD_processed_train.csv
+2025-06-20 23:08:35,874 - data_loader - WARNING - Data gaps found: 587 gaps
+2025-06-20 23:08:35,874 - data_loader - INFO - Data validation completed successfully
+2025-06-20 23:08:35,875 - data_loader - INFO - Preprocessed data: 796522 records
+2025-06-20 23:08:35,967 - data_loader - INFO - Loaded 170683 records from XAUUSD_processed_validation.csv
+2025-06-20 23:08:36,033 - data_loader - WARNING - Data gaps found: 126 gaps
+2025-06-20 23:08:36,033 - data_loader - INFO - Data validation completed successfully
+2025-06-20 23:08:36,033 - data_loader - INFO - Preprocessed data: 170683 records
+2025-06-20 23:08:36,175 - data_loader - INFO - Loaded 170684 records from XAUUSD_processed_test.csv
+2025-06-20 23:08:36,254 - data_loader - WARNING - Data gaps found: 124 gaps
+2025-06-20 23:08:36,254 - data_loader - INFO - Data validation completed successfully
+2025-06-20 23:08:36,254 - data_loader - INFO - Preprocessed data: 170684 records
+2025-06-20 23:08:36,254 - __main__ - INFO - Processing data with 32 workers
+2025-06-20 23:08:36,254 - __main__ - INFO - Data processing completed: 796522 records
+2025-06-20 23:08:36,254 - __main__ - INFO - Processing data with 32 workers
+2025-06-20 23:08:36,258 - __main__ - INFO - Data processing completed: 170683 records
+2025-06-20 23:08:36,258 - __main__ - INFO - Processing data with 32 workers
+2025-06-20 23:08:36,258 - __main__ - INFO - Data processing completed: 170684 records
+2025-06-20 23:08:36,258 - __main__ - INFO - Data loaded: Train=796522, Validation=170683, Test=170684
+2025-06-20 23:08:36,258 - __main__ - INFO - Starting feature pre-computation for all data splits. This may take a moment...
+2025-06-20 23:08:36,258 - __main__ - INFO - Starting feature pre-computation for 796522 records...
+2025-06-20 23:14:06,139 - __main__ - INFO - Using CPU for training
+2025-06-20 23:14:06,139 - __main__ - INFO - Loading and processing data...
+2025-06-20 23:14:06,527 - data_loader - INFO - Loaded 796522 records from XAUUSD_processed_train.csv
+2025-06-20 23:14:06,806 - data_loader - WARNING - Data gaps found: 587 gaps
+2025-06-20 23:14:06,806 - data_loader - INFO - Data validation completed successfully
+2025-06-20 23:14:06,806 - data_loader - INFO - Preprocessed data: 796522 records
+2025-06-20 23:14:06,962 - data_loader - INFO - Loaded 170683 records from XAUUSD_processed_validation.csv
+2025-06-20 23:14:07,012 - data_loader - WARNING - Data gaps found: 126 gaps
+2025-06-20 23:14:07,012 - data_loader - INFO - Data validation completed successfully
+2025-06-20 23:14:07,028 - data_loader - INFO - Preprocessed data: 170683 records
+2025-06-20 23:14:07,115 - data_loader - INFO - Loaded 170684 records from XAUUSD_processed_test.csv
+2025-06-20 23:14:07,188 - data_loader - WARNING - Data gaps found: 124 gaps
+2025-06-20 23:14:07,188 - data_loader - INFO - Data validation completed successfully
+2025-06-20 23:14:07,189 - data_loader - INFO - Preprocessed data: 170684 records
+2025-06-20 23:14:07,192 - __main__ - INFO - Processing data with 32 workers
+2025-06-20 23:14:07,192 - __main__ - INFO - Data processing completed: 796522 records
+2025-06-20 23:14:07,192 - __main__ - INFO - Processing data with 32 workers
+2025-06-20 23:14:07,192 - __main__ - INFO - Data processing completed: 170683 records
+2025-06-20 23:14:07,192 - __main__ - INFO - Processing data with 32 workers
+2025-06-20 23:14:07,192 - __main__ - INFO - Data processing completed: 170684 records
+2025-06-20 23:14:07,192 - __main__ - INFO - Data loaded: Train=796522, Validation=170683, Test=170684
+2025-06-20 23:14:07,193 - __main__ - INFO - Starting feature pre-computation for all data splits. This may take a moment...
+2025-06-20 23:14:07,193 - __main__ - INFO - Starting parallel feature pre-computation for 796522 records using 32 workers...
+2025-06-20 23:14:07,209 - __main__ - INFO - Split data into 32 chunks for parallel processing.
+2025-06-20 23:14:47,499 - __main__ - INFO - Using CPU for training
+2025-06-20 23:14:47,499 - __main__ - INFO - Loading and processing data...
+2025-06-20 23:14:47,884 - data_loader - INFO - Loaded 796522 records from XAUUSD_processed_train.csv
+2025-06-20 23:14:48,167 - data_loader - WARNING - Data gaps found: 587 gaps
+2025-06-20 23:14:48,167 - data_loader - INFO - Data validation completed successfully
+2025-06-20 23:14:48,167 - data_loader - INFO - Preprocessed data: 796522 records
+2025-06-20 23:14:48,329 - data_loader - INFO - Loaded 170683 records from XAUUSD_processed_validation.csv
+2025-06-20 23:14:48,394 - data_loader - WARNING - Data gaps found: 126 gaps
+2025-06-20 23:14:48,394 - data_loader - INFO - Data validation completed successfully
+2025-06-20 23:14:48,394 - data_loader - INFO - Preprocessed data: 170683 records
+2025-06-20 23:14:48,480 - data_loader - INFO - Loaded 170684 records from XAUUSD_processed_test.csv
+2025-06-20 23:14:48,546 - data_loader - WARNING - Data gaps found: 124 gaps
+2025-06-20 23:14:48,546 - data_loader - INFO - Data validation completed successfully
+2025-06-20 23:14:48,556 - data_loader - INFO - Preprocessed data: 170684 records
+2025-06-20 23:14:48,559 - __main__ - INFO - Processing data with 32 workers
+2025-06-20 23:14:48,559 - __main__ - INFO - Data processing completed: 796522 records
+2025-06-20 23:14:48,559 - __main__ - INFO - Processing data with 32 workers
+2025-06-20 23:14:48,559 - __main__ - INFO - Data processing completed: 170683 records
+2025-06-20 23:14:48,560 - __main__ - INFO - Processing data with 32 workers
+2025-06-20 23:14:48,560 - __main__ - INFO - Data processing completed: 170684 records
+2025-06-20 23:14:48,560 - __main__ - INFO - Data loaded: Train=796522, Validation=170683, Test=170684
+2025-06-20 23:14:48,560 - __main__ - INFO - Starting feature pre-computation for all data splits. This may take a moment...
+2025-06-20 23:14:48,560 - __main__ - INFO - Starting parallel feature pre-computation for 796522 records using 32 workers...
+2025-06-20 23:14:48,575 - __main__ - INFO - Split data into 32 chunks for parallel processing.
+2025-06-20 23:16:08,940 - __main__ - INFO - Using CPU for training
+2025-06-20 23:16:08,940 - __main__ - INFO - Loading and processing data...
+2025-06-20 23:16:09,325 - data_loader - INFO - Loaded 796522 records from XAUUSD_processed_train.csv
+2025-06-20 23:16:09,598 - data_loader - WARNING - Data gaps found: 587 gaps
+2025-06-20 23:16:09,598 - data_loader - INFO - Data validation completed successfully
+2025-06-20 23:16:09,598 - data_loader - INFO - Preprocessed data: 796522 records
+2025-06-20 23:16:09,746 - data_loader - INFO - Loaded 170683 records from XAUUSD_processed_validation.csv
+2025-06-20 23:16:09,817 - data_loader - WARNING - Data gaps found: 126 gaps
+2025-06-20 23:16:09,817 - data_loader - INFO - Data validation completed successfully
+2025-06-20 23:16:09,817 - data_loader - INFO - Preprocessed data: 170683 records
+2025-06-20 23:16:09,908 - data_loader - INFO - Loaded 170684 records from XAUUSD_processed_test.csv
+2025-06-20 23:16:09,974 - data_loader - WARNING - Data gaps found: 124 gaps
+2025-06-20 23:16:09,974 - data_loader - INFO - Data validation completed successfully
+2025-06-20 23:16:09,974 - data_loader - INFO - Preprocessed data: 170684 records
+2025-06-20 23:16:09,978 - __main__ - INFO - Processing data with 32 workers
+2025-06-20 23:16:09,978 - __main__ - INFO - Data processing completed: 796522 records
+2025-06-20 23:16:09,978 - __main__ - INFO - Processing data with 32 workers
+2025-06-20 23:16:09,978 - __main__ - INFO - Data processing completed: 170683 records
+2025-06-20 23:16:09,978 - __main__ - INFO - Processing data with 32 workers
+2025-06-20 23:16:09,978 - __main__ - INFO - Data processing completed: 170684 records
+2025-06-20 23:16:09,978 - __main__ - INFO - Data loaded: Train=796522, Validation=170683, Test=170684
+2025-06-20 23:16:09,978 - __main__ - INFO - Starting feature pre-computation for all data splits. This may take a moment...
+2025-06-20 23:16:09,978 - __main__ - INFO - Starting parallel feature pre-computation for 796522 records using 32 workers...
+2025-06-20 23:16:09,981 - __main__ - INFO - Split data into 32 chunks for parallel processing with an overlap of 200 rows.
+2025-06-20 23:17:23,681 - __main__ - INFO - Using CPU for training
+2025-06-20 23:17:23,682 - __main__ - INFO - Loading and processing data...
+2025-06-20 23:17:24,063 - data_loader - INFO - Loaded 796522 records from XAUUSD_processed_train.csv
+2025-06-20 23:17:24,349 - data_loader - WARNING - Data gaps found: 587 gaps
+2025-06-20 23:17:24,357 - data_loader - INFO - Data validation completed successfully
+2025-06-20 23:17:24,357 - data_loader - INFO - Preprocessed data: 796522 records
+2025-06-20 23:17:24,507 - data_loader - INFO - Loaded 170683 records from XAUUSD_processed_validation.csv
+2025-06-20 23:17:24,570 - data_loader - WARNING - Data gaps found: 126 gaps
+2025-06-20 23:17:24,570 - data_loader - INFO - Data validation completed successfully
+2025-06-20 23:17:24,570 - data_loader - INFO - Preprocessed data: 170683 records
+2025-06-20 23:17:24,660 - data_loader - INFO - Loaded 170684 records from XAUUSD_processed_test.csv
+2025-06-20 23:17:24,724 - data_loader - WARNING - Data gaps found: 124 gaps
+2025-06-20 23:17:24,724 - data_loader - INFO - Data validation completed successfully
+2025-06-20 23:17:24,724 - data_loader - INFO - Preprocessed data: 170684 records
+2025-06-20 23:17:24,724 - __main__ - INFO - Processing data with 32 workers
+2025-06-20 23:17:24,724 - __main__ - INFO - Data processing completed: 796522 records
+2025-06-20 23:17:24,724 - __main__ - INFO - Processing data with 32 workers
+2025-06-20 23:17:24,724 - __main__ - INFO - Data processing completed: 170683 records
+2025-06-20 23:17:24,724 - __main__ - INFO - Processing data with 32 workers
+2025-06-20 23:17:24,724 - __main__ - INFO - Data processing completed: 170684 records
+2025-06-20 23:17:24,724 - __main__ - INFO - Data loaded: Train=796522, Validation=170683, Test=170684
+2025-06-20 23:17:24,724 - __main__ - INFO - Starting feature pre-computation for all data splits. This may take a moment...
+2025-06-20 23:17:24,724 - __main__ - INFO - Starting parallel feature pre-computation for 796522 records using 32 workers...
+2025-06-20 23:17:24,724 - __main__ - INFO - Split data into 32 chunks for parallel processing with an overlap of 500 rows.
+2025-06-20 23:18:35,546 - __main__ - INFO - Using CPU for training
+2025-06-20 23:18:35,546 - __main__ - INFO - Loading and processing data...
+2025-06-20 23:18:35,934 - data_loader - INFO - Loaded 796522 records from XAUUSD_processed_train.csv
+2025-06-20 23:18:36,209 - data_loader - WARNING - Data gaps found: 587 gaps
+2025-06-20 23:18:36,209 - data_loader - INFO - Data validation completed successfully
+2025-06-20 23:18:36,209 - data_loader - INFO - Preprocessed data: 796522 records
+2025-06-20 23:18:36,305 - data_loader - INFO - Loaded 170683 records from XAUUSD_processed_validation.csv
+2025-06-20 23:18:36,370 - data_loader - WARNING - Data gaps found: 126 gaps
+2025-06-20 23:18:36,370 - data_loader - INFO - Data validation completed successfully
+2025-06-20 23:18:36,370 - data_loader - INFO - Preprocessed data: 170683 records
+2025-06-20 23:18:36,522 - data_loader - INFO - Loaded 170684 records from XAUUSD_processed_test.csv
+2025-06-20 23:18:36,585 - data_loader - WARNING - Data gaps found: 124 gaps
+2025-06-20 23:18:36,586 - data_loader - INFO - Data validation completed successfully
+2025-06-20 23:18:36,586 - data_loader - INFO - Preprocessed data: 170684 records
+2025-06-20 23:18:36,588 - __main__ - INFO - Processing data with 32 workers
+2025-06-20 23:18:36,588 - __main__ - INFO - Data processing completed: 796522 records
+2025-06-20 23:18:36,588 - __main__ - INFO - Processing data with 32 workers
+2025-06-20 23:18:36,588 - __main__ - INFO - Data processing completed: 170683 records
+2025-06-20 23:18:36,588 - __main__ - INFO - Processing data with 32 workers
+2025-06-20 23:18:36,588 - __main__ - INFO - Data processing completed: 170684 records
+2025-06-20 23:18:36,588 - __main__ - INFO - Data loaded: Train=796522, Validation=170683, Test=170684
+2025-06-20 23:18:36,591 - __main__ - INFO - Starting feature pre-computation for all data splits. This may take a moment...
+2025-06-20 23:18:36,591 - __main__ - INFO - Starting feature pre-computation for 796522 records. This is a one-time cost and may take several minutes...
+2025-06-21 00:42:19,244 - __main__ - INFO - Feature pre-computation for 796522 records finished in 5022.65 seconds.
+2025-06-21 00:42:19,603 - __main__ - INFO - Starting feature pre-computation for 170683 records. This is a one-time cost and may take several minutes...
+2025-06-21 00:50:19,490 - __main__ - INFO - Feature pre-computation for 170683 records finished in 479.89 seconds.
+2025-06-21 00:50:19,570 - __main__ - INFO - Starting feature pre-computation for 170684 records. This is a one-time cost and may take several minutes...
+2025-06-21 00:58:02,470 - __main__ - INFO - Feature pre-computation for 170684 records finished in 462.90 seconds.
+2025-06-21 00:58:02,541 - __main__ - INFO - All features pre-computed.
+2025-06-21 00:58:02,541 - __main__ - INFO - Creating high-performance environments...
+2025-06-21 00:58:02,541 - __main__ - INFO - Creating 32 high-performance parallel environments...
+2025-06-21 00:58:02,757 - __main__ - INFO - Split data into 32 chunks of ~24892 records each
+2025-06-21 00:58:02,757 - __main__ - INFO - Creating SubprocVecEnv for true parallel processing...
+2025-06-21 00:59:04,253 - __main__ - INFO - Adding VecNormalize for training stability...
+2025-06-21 00:59:04,269 - __main__ - INFO - High-performance environment with 32 parallel processes created successfully.
+2025-06-21 00:59:04,280 - __main__ - INFO - Creating 8 high-performance parallel environments...
+2025-06-21 00:59:04,323 - __main__ - INFO - Split data into 8 chunks of ~21336 records each
+2025-06-21 00:59:04,323 - __main__ - INFO - Creating SubprocVecEnv for true parallel processing...
+2025-06-21 00:59:19,707 - __main__ - INFO - Adding VecNormalize for training stability...
+2025-06-21 00:59:19,707 - __main__ - INFO - High-performance environment with 8 parallel processes created successfully.
+2025-06-21 00:59:19,707 - __main__ - INFO - Creating optimized model...
+2025-06-21 00:59:19,707 - __main__ - INFO - Creating optimized PPO model...
+2025-06-21 00:59:20,224 - __main__ - INFO - Optimized PPO model created successfully
+2025-06-21 00:59:20,224 - __main__ - INFO - Created new optimized model
+2025-06-21 00:59:20,224 - __main__ - INFO - Starting high-performance training...
+2025-06-21 00:59:20,224 - __main__ - INFO - Setting up high-performance training callbacks...
+2025-06-21 00:59:20,224 - __main__ - INFO - Starting high-performance training for 1000000 timesteps
+2025-06-21 00:59:20,224 - __main__ - INFO - Using 32 parallel environments
+2025-06-21 00:59:20,241 - __main__ - ERROR - Training failed: operands could not be broadcast together with shapes (57,) (2360,) 
+2025-06-21 05:42:12,048 - __main__ - INFO - Using CPU for training
+2025-06-21 05:42:12,048 - __main__ - INFO - Loading and processing data...
+2025-06-21 05:42:12,436 - data_loader - INFO - Loaded 796522 records from XAUUSD_processed_train.csv
+2025-06-21 05:42:12,717 - data_loader - WARNING - Data gaps found: 587 gaps
+2025-06-21 05:42:12,717 - data_loader - INFO - Data validation completed successfully
+2025-06-21 05:42:12,717 - data_loader - INFO - Preprocessed data: 796522 records
+2025-06-21 05:42:12,814 - data_loader - INFO - Loaded 170683 records from XAUUSD_processed_validation.csv
+2025-06-21 05:42:12,885 - data_loader - WARNING - Data gaps found: 126 gaps
+2025-06-21 05:42:12,886 - data_loader - INFO - Data validation completed successfully
+2025-06-21 05:42:12,886 - data_loader - INFO - Preprocessed data: 170683 records
+2025-06-21 05:42:13,041 - data_loader - INFO - Loaded 170684 records from XAUUSD_processed_test.csv
+2025-06-21 05:42:13,107 - data_loader - WARNING - Data gaps found: 124 gaps
+2025-06-21 05:42:13,107 - data_loader - INFO - Data validation completed successfully
+2025-06-21 05:42:13,107 - data_loader - INFO - Preprocessed data: 170684 records
+2025-06-21 05:42:13,110 - __main__ - INFO - Data loaded: Train=796522, Validation=170683, Test=170684
+2025-06-21 05:42:13,110 - __main__ - INFO - Starting feature pre-computation for all data splits. This will take several minutes but is a one-time cost...
+2025-06-21 05:42:13,110 - __main__ - INFO - Starting feature pre-computation for 796522 records. This is a one-time cost and may take several minutes...
+2025-06-21 06:02:29,547 - __main__ - INFO - Using CPU for training
+2025-06-21 06:02:29,547 - __main__ - INFO - Loading and processing data...
+2025-06-21 06:02:29,940 - data_loader - INFO - Loaded 796522 records from XAUUSD_processed_train.csv
+2025-06-21 06:02:30,215 - data_loader - WARNING - Data gaps found: 587 gaps
+2025-06-21 06:02:30,215 - data_loader - INFO - Data validation completed successfully
+2025-06-21 06:02:30,215 - data_loader - INFO - Preprocessed data: 796522 records
+2025-06-21 06:02:30,308 - data_loader - INFO - Loaded 170683 records from XAUUSD_processed_validation.csv
+2025-06-21 06:02:30,374 - data_loader - WARNING - Data gaps found: 126 gaps
+2025-06-21 06:02:30,374 - data_loader - INFO - Data validation completed successfully
+2025-06-21 06:02:30,374 - data_loader - INFO - Preprocessed data: 170683 records
+2025-06-21 06:02:30,532 - data_loader - INFO - Loaded 170684 records from XAUUSD_processed_test.csv
+2025-06-21 06:02:30,600 - data_loader - WARNING - Data gaps found: 124 gaps
+2025-06-21 06:02:30,600 - data_loader - INFO - Data validation completed successfully
+2025-06-21 06:02:30,600 - data_loader - INFO - Preprocessed data: 170684 records
+2025-06-21 06:02:30,604 - __main__ - INFO - Data loaded: Train=796522, Validation=170683, Test=170684
+2025-06-21 06:02:30,604 - __main__ - INFO - Starting feature pre-computation for all data splits. This will take several minutes but is a one-time cost...
+2025-06-21 06:02:30,604 - __main__ - INFO - Starting feature pre-computation for 796522 records. This is a one-time cost and may take several minutes...
+2025-06-21 06:02:30,605 - src.strategy.liquidity_sweep - INFO - Generating strategy signals for M1...
+2025-06-21 06:02:30,605 - src.strategy.liquidity_sweep - INFO - Detecting liquidity sweeps...
+2025-06-21 06:12:27,786 - src.strategy.liquidity_sweep - INFO - Detecting market structure shifts...
+2025-06-21 06:13:20,034 - __main__ - INFO - Using CPU for training
+2025-06-21 06:13:20,034 - __main__ - INFO - Loading and processing data...
+2025-06-21 06:13:20,410 - data_loader - INFO - Loaded 796522 records from XAUUSD_processed_train.csv
+2025-06-21 06:13:20,682 - data_loader - WARNING - Data gaps found: 587 gaps
+2025-06-21 06:13:20,682 - data_loader - INFO - Data validation completed successfully
+2025-06-21 06:13:20,682 - data_loader - INFO - Preprocessed data: 796522 records
+2025-06-21 06:13:20,769 - data_loader - INFO - Loaded 170683 records from XAUUSD_processed_validation.csv
+2025-06-21 06:13:20,834 - data_loader - WARNING - Data gaps found: 126 gaps
+2025-06-21 06:13:20,834 - data_loader - INFO - Data validation completed successfully
+2025-06-21 06:13:20,834 - data_loader - INFO - Preprocessed data: 170683 records
+2025-06-21 06:13:20,985 - data_loader - INFO - Loaded 170684 records from XAUUSD_processed_test.csv
+2025-06-21 06:13:21,044 - data_loader - WARNING - Data gaps found: 124 gaps
+2025-06-21 06:13:21,044 - data_loader - INFO - Data validation completed successfully
+2025-06-21 06:13:21,044 - data_loader - INFO - Preprocessed data: 170684 records
+2025-06-21 06:13:21,052 - __main__ - INFO - Data loaded: Train=796522, Validation=170683, Test=170684
+2025-06-21 06:13:21,052 - __main__ - INFO - Starting feature pre-computation for all data splits. This will take several minutes but is a one-time cost...
+2025-06-21 06:13:21,052 - __main__ - INFO - Starting feature pre-computation for 796522 records. This is a one-time cost and may take several minutes...
+2025-06-21 06:13:21,052 - src.strategy.liquidity_sweep - INFO - Generating strategy signals for M1...
+2025-06-21 06:13:21,052 - src.strategy.liquidity_sweep - INFO - Detecting liquidity sweeps...
+2025-06-21 06:13:26,652 - __main__ - INFO - Using CPU for training
+2025-06-21 06:13:26,652 - __main__ - INFO - Loading and processing data...
+2025-06-21 06:13:27,035 - data_loader - INFO - Loaded 796522 records from XAUUSD_processed_train.csv
+2025-06-21 06:13:27,305 - data_loader - WARNING - Data gaps found: 587 gaps
+2025-06-21 06:13:27,305 - data_loader - INFO - Data validation completed successfully
+2025-06-21 06:13:27,305 - data_loader - INFO - Preprocessed data: 796522 records
+2025-06-21 06:13:27,398 - data_loader - INFO - Loaded 170683 records from XAUUSD_processed_validation.csv
+2025-06-21 06:13:27,467 - data_loader - WARNING - Data gaps found: 126 gaps
+2025-06-21 06:13:27,467 - data_loader - INFO - Data validation completed successfully
+2025-06-21 06:13:27,467 - data_loader - INFO - Preprocessed data: 170683 records
+2025-06-21 06:13:27,615 - data_loader - INFO - Loaded 170684 records from XAUUSD_processed_test.csv
+2025-06-21 06:13:27,680 - data_loader - WARNING - Data gaps found: 124 gaps
+2025-06-21 06:13:27,680 - data_loader - INFO - Data validation completed successfully
+2025-06-21 06:13:27,680 - data_loader - INFO - Preprocessed data: 170684 records
+2025-06-21 06:13:27,683 - __main__ - INFO - Data loaded: Train=796522, Validation=170683, Test=170684
+2025-06-21 06:13:27,683 - __main__ - INFO - Starting feature pre-computation for all data splits. This will take several minutes but is a one-time cost...
+2025-06-21 06:13:27,683 - __main__ - INFO - Starting feature pre-computation for 796522 records. This is a one-time cost and may take several minutes...
+2025-06-21 06:13:27,683 - src.strategy.liquidity_sweep - INFO - Generating strategy signals for M1...
+2025-06-21 06:13:27,683 - src.strategy.liquidity_sweep - INFO - Detecting liquidity sweeps...
+2025-06-21 06:23:02,873 - src.strategy.liquidity_sweep - INFO - Detecting market structure shifts...
+2025-06-21 06:24:50,137 - src.strategy.liquidity_sweep - INFO - Detecting order blocks...
+2025-06-21 06:26:13,384 - src.strategy.liquidity_sweep - INFO - Performing multi-timeframe analysis...
